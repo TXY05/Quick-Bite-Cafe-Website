@@ -1,0 +1,237 @@
+<!--
+    DCS Y1S1 G6 WDD Assignment WEB PAGE
+    Title: Quick Bite
+
+    Group members: 1)AMANDA XIN YUE WONG
+                   2)CHIA TENG HUI
+                   4)FONG XIN RONG, ALISTAIR
+                   5)TEH XI YUAN
+
+    file name : payment.html
+    <Payment Page>
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <base href="payment_img/">
+     <meta charset="UTF-8">
+     <audio autoplay="true" loop>
+         <source src="../bgm.mp3" type="audio/mp3"/>
+         <source src="../bgm.ogg" type="audio/ogg"/>
+         <p>Upgrade your browser to HTML5</p>
+     </audio>
+     
+     <!-- custom css file link  -->
+     <link rel="stylesheet" href="../quick_bite_cafe.css">
+     <!-- <script src="../quick_bite_cafe.css" async></script> -->
+     <style type="text/css">
+         *{
+         font-family: 'Poppins', sans-serif;
+         margin:0; padding:0;
+         box-sizing: border-box;
+         outline: none; border:none;
+         text-transform: capitalize;
+         transition: all .2s linear;
+         }
+     </style>
+ </head>
+ <body>
+ 
+     <div class="payment">
+ 
+         <form method="get" action="../home.html" target="_blank">
+             <div class="bookingTime">
+                 <label for="time">Time :</label>
+                 <input list="times" name="time" id="time" placeholder="7.30 AM" required>
+                 
+                 <datalist id="times">
+                     <option value="7.30 AM"></option>
+                     <option value="7.45 AM"></option>
+                     <option value="8.00 AM"></option>
+                     <option value="8.15 AM"></option>
+                     <option value="8.30 AM"></option>
+                     <option value="8.45 AM"></option>
+                     <option value="9.00 AM"></option>
+                     <option value="9.15 AM"></option>
+                     <option value="9.30 AM"></option>
+                     <option value="9.45 AM"></option>
+                     <option value="10.00 AM"></option>
+                     <option value="10.15 AM"></option>
+                     <option value="10.30 AM"></option>
+                     <option value="10.45 AM"></option>
+                     <option value="11.00 AM"></option>
+                     <option value="11.15 AM"></option>
+                     <option value="11.30 AM"></option>
+                     <option value="11.45 AM"></option>
+                     <option value="12.00 PM"></option>
+                     <option value="12.15 PM"></option>
+                     <option value="12.30 PM"></option>
+                     <option value="12.45 PM"></option>
+                     <option value="1.00 PM"></option>
+                     <option value="1.15 PM"></option>
+                     <option value="1.30 PM"></option>
+                     <option value="1.45 PM"></option>
+                     <option value="2.00 PM"></option>
+                     <option value="2.15 PM"></option>
+                     <option value="2.30 PM"></option>
+                     <option value="2.45 PM"></option>
+                     <option value="3.00 PM"></option>
+                     <option value="3.15 PM"></option>
+                     <option value="3.30 PM"></option>
+                     <option value="3.45 PM"></option>
+                     <option value="4.00 PM"></option>
+                     <option value="4.15 PM"></option>
+                     <option value="4.30 PM"></option>
+                     <option value="4.45 PM"></option>
+                     <option value="5.00 PM"></option>
+                     <option value="5.15 PM"></option>
+                     <option value="5.30 PM"></option>
+                     <option value="5.45 PM"></option>
+                     <option value="6.00 PM"></option>
+                     <option value="6.15 PM"></option>
+                     <option value="6.30 PM"></option>
+                 </datalist>
+             </div>
+             <div class="bookingType">
+                 <input type="radio" id="self_pickup" name="booking" checked onclick="showBillingAddress(1)"><label for="self_pickup">Self-Pickup</label>
+                 <input type="radio" id="eat_in" name="booking" onclick="showBillingAddress(2)"><label for="eat_in">Eat In</label>
+                 <input type="radio" id="delivery" name="booking" onclick="showBillingAddress(3)"><label for="delivery" >Delivery</label>
+             </div>
+                 <div class="row">
+                     <div class="col">
+                         <h3 class="title">Payment</h3>
+                         <div class="inputBox">
+                             <span>Cards Accepted :</span>
+                             <img src="card_img.png" alt="">
+                         </div>
+                         <div class="inputBox">
+                             <span>Name On Card :</span>
+                             <input id="name" type="text" placeholder="Mr. John Deo" required>
+                         </div>
+                         <div class="inputBox">
+                             <span>Credit Card Number :</span>
+                             <input id="cardNum" type="text" placeholder="1111-2222-3333-4444" required>
+                         </div>
+                         <div class="inputBox">
+                             <span>Exp Month :</span>
+                             <input id="expMonth" type="text" placeholder="January" required>
+                         </div>
+         
+                         <div class="flex">
+                             <div class="inputBox">
+                                 <span>Exp Year :</span>
+                                 <input id="expYear" type="number" placeholder="2023" required>
+                             </div>
+                             <div class="inputBox">
+                                 <span>CVV :</span>
+                                 <input id="cvv" type="text" placeholder="1234" required>
+                             </div>
+                         </div>
+                         
+         
+                     </div>
+                     <div id="billingAddress">
+                         <div class="col">
+                             <h3 class="title">Billing Address</h3>
+             
+                             <div class="inputBox">
+                                 <span>Full Name :</span>
+                                 <input id="fname" type="text" placeholder="John Deo" required>
+                             </div>
+                             <div class="inputBox">
+                                 <span>Email :</span>
+                                 <input id="email" type="email" placeholder="example@example.com" required>
+                             </div>
+                             <div class="inputBox">
+                                 <span>Address :</span>
+                                 <input id="address" type="text" placeholder="Room - Street - Locality" required>
+                             </div>
+                             <div class="inputBox">
+                                 <span>City :</span>
+                                 <input id="city" type="text" placeholder="Setapak" required>
+                             </div>
+             
+                             <div class="flex">
+                                 <div class="inputBox">
+                                     <span>State :</span>
+                                     <input id="state" type="text" placeholder="Selangor" required>
+                                 </div>
+                                 <div class="inputBox">
+                                     <span>Zip Code :</span>
+                                     <input id="zipCode" type="text" placeholder="53300" required>
+                                 </div>
+                             </div>
+                             
+             
+                         </div>
+                     </div>
+                 </div>
+                     <input type="submit" value="Proceed to Checkout" class="btn btn_primary btn_purchase" onclick="purchaseClicked()">
+         </form>
+ 
+ </div>
+ <script>
+     var selection=1;
+ 
+     function showBillingAddress(val){
+     if(val==1)
+     {
+         selection=1;
+         document.getElementById('billingAddress').style.display='none';
+     }
+     if(val==2){
+         selection=2;
+         document.getElementById('billingAddress').style.display='none';
+     }
+     if(val==3){
+         selection=3;
+         document.getElementById('billingAddress').style.display='block';
+     }
+ }
+ 
+ 
+ function purchaseClicked() {
+     const times=document.querySelector('#time').value;
+     const name=document.getElementById('name');
+     const cardNum=document.getElementById('cardNum');
+     const expMonth=document.getElementById('expMonth');
+     const expYear=document.getElementById('expYear');
+     const cvv=document.getElementById('cvv');
+     const fname=document.getElementById('fname');
+     const email=document.getElementById('email');
+     const address=document.getElementById('address');
+     const city=document.getElementById('city');
+     const state=document.getElementById('state');
+     const zipCode=document.getElementById('zipCode');
+ 
+     const nameValue=name.value.trim();
+     const cardNumValue=cardNum.value.trim();
+     const expMonthValue=expMonth.value.trim();
+     const expYearValue=expYear.value.trim();
+     const cvvValue=cvv.value.trim();
+     const fnameValue=fname.value.trim();
+     const emailValue=email.value.trim();
+     const addressValue=address.value.trim();
+     const cityValue=city.value.trim();
+     const stateValue=state.value.trim();
+     const zipCodeValue=zipCode.value.trim();
+ 
+     if(selection==1||selection==2){
+         if(times==""||nameValue==""||cardNumValue==""||expMonthValue==""||expYearValue==""||cvvValue==""){
+         alert('Please Enter All Required Information')
+     }else{
+         alert('Thank you for your purchase');
+         document.location.href='../home.html'
+     }
+     }else if(selection==3){
+         if(times==""||nameValue==""||cardNumValue==""||expMonthValue==""||expYearValue==""||cvvValue==""||fnameValue==""||emailValue==""||addressValue==""||cityValue==""||stateValue==""||zipCodeValue==""){
+         alert('Please Enter All Required Information')
+     }else{
+         alert('Thank you for your purchase');
+         document.location.href='../home.html'
+     }
+     }
+ }
+ </script>
+ </body>
+ </html>

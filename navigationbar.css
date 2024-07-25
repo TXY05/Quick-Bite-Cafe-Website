@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+}
+
+body{
+    font-family: sans-serif, Arial, Verdana;
+}
+
+header {
+    position: relative;
+    background-color: #947B64;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5em;
+    
+}
+
+.navbar ul, .dropdown_content ul {
+    list-style: none;
+}
+
+.navbar .links a:hover {
+    color: #E2A165;
+}
+
+.navbar {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    min-height: 5%;
+    margin: 0 auto;
+    align-items:center;
+}
+
+.navbar .logo img{
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    min-width: 120px;
+    height: auto;
+}
+
+.navbar .links {
+    display: flex;
+    text-align: center;
+    gap: 1.5rem;   
+}
+
+.navbar .links li{
+    justify-content: center; 
+    align-items: center;
+}
+
+.login {
+    margin-left: auto;
+    margin-right: 2%;
+}
+
+.action_btn1, .action_btn2{
+    background-color: rgb(70, 68, 68);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 4.8rem;
+    text-align: center;
+}
+
+.action_btn1:hover, .action_btn2:hover{
+    color: rgb(80, 136, 182);
+}
+
+.dropdown_btn img{
+    display: none;
+    align-items: center;
+    height: 50px;
+    cursor: pointer;
+}
+
+.dropdown_content {
+    display: none;
+    position: absolute;   
+    z-index: +3;
+    left: 1rem;
+    right: 1rem;
+    height: 250px;
+    background-color: transparent;
+    backdrop-filter: blur(8px);          
+    overflow-y: auto; 
+    border: black 1px solid;
+}
+
+.dropdown_content ul {
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 20px;
+    gap: 10%;
+    height: 300px;
+    width: 100%;
+}
+.dropdown_content li {
+    padding: 0.7rem;
+    margin-bottom: 10px;
+    width: auto;
+    min-width: max-content;
+    border: black 1px solid;
+}
+
+.dropdown_content a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.dropdown_content a:hover {
+    color: rgb(80, 136, 182);
+}
+
+/* responsive design for navigation bar    */
+@media screen and (max-width: 1400px){
+    .navbar .links, .login
+    {
+        display: none;
+    }
+    .navbar .dropdown_btn img{
+        display: block;
+    }
+    .dropdown_btn, a :last-child{margin-left:auto; margin-right: 2%}
+}
+
+
+
+

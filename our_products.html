@@ -1,0 +1,429 @@
+<!--
+    DCS Y1S1 G6 WDD Assignment WEB PAGE
+    Title: Quick Bite
+
+    Group members: 1)AMANDA XIN YUE WONG
+                   2)CHIA TENG HUI
+                   4)FONG XIN RONG, ALISTAIR
+                   5)TEH XI YUAN
+
+    file name : our_products.html
+    <Our Product Page>
+ -->
+ <!DOCTYPE html>
+ <html>
+     <head>
+         <title>Quick Bite Cafe - Our Products</title>
+         <base href = "our_products_img/">
+         <!--   <meta>  -->
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <meta name="description" content="fast serving food near TarC">
+         <meta name="keywords" content="latest menu, tarc, popular food, high rating food, delicious food">
+         <!--   <audio>  -->
+         <audio autoplay="true" loop>
+             <source src="../bgm.mp3" type="audio/mp3"/>
+             <source src="../bgm.ogg" type="audio/ogg"/>
+             <p>Upgrade your browser to HTML5</p>
+         </audio>
+         <!--   <link>  -->
+         <link href="../quick_bite_cafe.css" rel="stylesheet">
+         <link href="../navigationbar.css" rel="stylesheet">
+         <script src="../quick_bite_cafe.js" async></script>
+     </head>
+ 
+     <body>
+         <!--  Navigation Bar // Header  -->
+         <header>
+             <nav class="navbar">
+                 <div class="logo">
+                     <a href="../home.html"><img src="../header_img/quick_bite_cafe_logo.png" alt="logo"></a>
+                 </div>
+                 <ul class="links">
+                     <li><a href="../home.html" title="HOME">HOME</a></li>
+                     <li><a href="../about_us.html" title="ABOUT US">ABOUT US</a></li>
+                     <li><a href="../our_products.html" title="OUR PRODUCTS">OUR PRODUCTS</a></li>
+                     <li><a href="../feedback.html" title="FEEDBACK">FEEDBACK</a></li>     
+                 </ul>
+                 <div class="login">
+                     <a href="../login.html" class="action_btn2" title="LOGIN">LOGIN</a>
+                 </div>
+                 <!--dropdown bar-->
+                 <div class="dropdown_btn">
+                     <img src="../tf_navicon2.png" alt="navicon" onclick="dropdown()">           
+                 </div>
+             </nav>
+             <div class="dropdown_content">
+                 <ul>
+                     <li><a href="../home.html" title="HOME">HOME</a></li>
+                     <li><a href="../about_us.html" title="ABOUT US">ABOUT US</a></li>
+                     <li><a href="../our_products.html" title="OUR PRODUCTS">OUR PRODUCTS</a></li>
+                     <li><a href="../feedback.html" title="FEEDBACK">FEEDBACK</a></li>
+                     <a href="../login.html" class="action_btn2" title="LOGIN">LOGIN</a>
+                 </ul>
+             </div>
+             <script>
+                 function dropdown() {
+                     var dropdown = document.querySelector('.dropdown_content');
+                     
+                     if (dropdown.style.display === 'none') {
+                         dropdown.style.display = 'flex';
+                     } else {
+                         dropdown.style.display = 'none';
+                     }
+                 }
+             </script>
+         </header>
+         <!--      Webpage // Main      -->
+         <main>
+             <div class="intro">
+                 <h1>OUR PRODUCTS</h1>
+                 <hr>
+                 <div class="speech">
+                     <blockquote>
+                         Good vibes or bad vibes, eating will always be the best thing to do!
+                     </blockquote>
+                     <cite>
+                         Quick Bite Cafe
+                     </cite>
+                 </div>
+             </div>
+             <div class="cart">
+                 <div class="our_products_content">
+                     <div class="selection">
+                         <ul>
+                             <li><a href="../our_products.html#new_arrival">New Arrival</a></li>
+                             <li><a href="../our_products.html#set_meal">Set Meal</a></li>
+                             <li><a href="../our_products.html#main_dish">Main Dish</a></li>
+                             <li><a href="../our_products.html#add_on">Add On</a></li>
+                             <li><a href="../our_products.html#drinks">Drinks</a></li>
+                             <li><a href="../our_products.html#merchandise">Merchandise</a></li>
+                         </ul>
+                     </div>
+                     <div class="menu">
+                         <div class="cart_icon">
+                             <input type="checkbox" id="cart_checkbox">
+                             <label for="cart_checkbox"><img src="cart_icon.png" alt=""></label>
+                         </div>
+                         <h2 id="new_arrival">New Arrival</h2>
+                         <div class="new_arrival">
+                             <div class="product" data-name="p-1"><img src="set_a.png" alt="Spaghetti, French Fries and a drink of your choice"></div> 
+                             <div class="product" data-name="p-2" ><img src="udon.png" alt="Udon"></div> 
+                             <div class="product" data-name="p-7"><img src="garlic_bread.png" alt="Garlic Bread"></div>
+                         </div>
+ 
+                         <h2 id="set_meal">Set Meal</h2>
+                         <div class="set_meal">
+                             <div class="product" data-name="p-1"><img src="set_a.png" alt="Spaghetti, French Fries and a drink of your choice"></div> 
+                         </div>
+ 
+                         <h2 id="main_dish">Main Dish</h2>
+                         <div class="main_dish">    
+                             <div class="product" data-name="p-2"><img src="udon.png" alt="Udon"></div> 
+                             <div class="product" data-name="p-3"><img src="spaghetti.png" alt="Spaghetti Bolognese"></div> 
+                             <div class="product" data-name="p-4"><img src="fish_and_chips.png" alt="Fish and Chips"></div> 
+                             <div class="product" data-name="p-5"><img src="fried_chicken.png" alt="Fried Chicken"></div> 
+                             <div class="product" data-name="p-6"><img src="fried_rice.png" alt="Fried Rice"></div> 
+                         </div>
+ 
+                         <h2 id="add_on">Add On</h2>
+                         <div class="add_on">    
+                             <div class="product" data-name="p-7"><img src="garlic_bread.png" alt="Garlic Bread"></div> 
+                             <div class="product" data-name="p-8"><img src="croissant.png" alt="Croissant"></div> 
+                             <div class="product" data-name="p-9"><img src="sandwich.png" alt="Sandwich"></div> 
+                             <div class="product" data-name="p-10"><img src="salad.png" alt="Salad"></div> 
+                             <div class="product" data-name="p-11"><img src="chocolate_cake.png" alt="Chocolate Cake"></div> 
+                             <div class="product" data-name="p-12"><img src="strawberry_cake.png" alt="Strawberry Cake"></div> 
+                             <div class="product" data-name="p-13"><img src="ice_cream.png" alt="Ice Cream"></div> 
+                             <div class="product" data-name="p-14"><img src="doughnut.png" alt="Doughnut"></div> 
+                             <div class="product" data-name="p-15"><img src="cupcake.png" alt="Cupcake"></div> 
+                         </div>
+ 
+                         <h2 id="drinks">Drinks</h2>
+                         <div class="drinks">    
+                             <div class="product" data-name="p-16"><img src="coffee.png" alt="Coffee"></div> 
+                             <div class="product" data-name="p-17"><img src="matcha_latte.png" alt="Matcha Latte"></div> 
+                             <div class="product" data-name="p-18"><img src="boba_tea.png" alt="Boba Tea"></div> 
+                             <div class="product" data-name="p-19"><img src="chocolate_drink.png" alt="Chocolate Drink"></div> 
+                             <div class="product" data-name="p-20"><img src="orange_juice.png" alt="Orange Juice"></div> 
+                             <div class="product" data-name="p-21"><img src="lemon_juice.png" alt="Lemon Juice"></div> 
+                             <div class="product" data-name="p-22"><img src="watermelon_juice.png" alt="Watermelon Juice"></div>
+                         </div>
+ 
+                         <h2 id="merchandise">Merchandise</h2>
+                         <div class="merchandise">
+                             <div class="product" data-name="p-23"><img src="apron.jpg" alt="Apron"></div> 
+                             <div class="product" data-name="p-24" ><img src="bottled_beverages.jpeg" alt="Bottled Beverages"></div> 
+                             <div class="product" data-name="p-25"><img src="coasters.jpg" alt="Coasters"></div>
+                             <div class="product" data-name="p-26"><img src="stainless_straw.jpg" alt="Stainless Straw"></div> 
+                         </div>
+                     </div>
+                 </div>
+                        
+                 <div class="cartList">
+                    <img src="close.png" alt="" id="cart_close"></i>
+                    <div class="head">My Cart</div>
+                    <div class="cart_row">
+                        <span class="cart_item cart_header cart_column">ITEM</span>
+                        <span class="cart_price cart_header cart_column">PRICE</span>
+                        <span class="cart_quantity cart_header cart_column">QUANTITY</span>
+                    </div>
+                    <div class="cart_items"></div>
+                        <div class="cart_total">
+                            <strong class="cart_total_title">Total</strong>
+                            <span class="cart_total_price">RM0.00</span>
+                        </div>
+                        <button class="submit-btn" type="button" onclick="document.location='../payment.html'" target="_blank">PURCHASE</button>
+                 </div>
+             </div>
+         
+             <div class="products_preview">
+                 <div class="preview" data-target="p-1">
+                     <img class="close" src="close.png" alt="">
+                     <img class="shop_item_image" src="set_a.png" alt="">
+                     <h3 class="shop_item_title">Spaghetti, French Fries and a drink of your choice</h3>
+                     <div class="shop_item_price">RM12.00</div>
+                     <div class="buttons">
+                         <button class="shop_item_button" type="button">Add To Cart</button>
+                     </div>
+                 </div>
+                 <div class="preview" data-target="p-2">
+                     <img class="close" src="close.png" alt="">
+                     <img class="shop_item_image" src="udon.png" alt="">
+                     <h3 class="shop_item_title">Udon</h3>
+                     <div class="shop_item_price">RM11.50</div>
+                     <div class="buttons">
+                         <button class="btn btn_primary shop_item_button" type="button">Add To Cart</button>
+                     </div>
+                 </div>
+                 <div class="preview" data-target="p-3">
+                     <img class="close" src="close.png" alt="">
+                     <img class="shop_item_image" src="spaghetti.png" alt="">
+                     <h3 class="shop_item_title">Spaghetti Bolognese</h3>
+                     <div class="shop_item_price">RM11.00</div>
+                     <div class="buttons">
+                         <button class="btn btn_primary shop_item_button" type="button">Add To Cart</button>
+                     </div>
+                 </div>
+                 <div class="preview" data-target="p-4">
+                     <img class="close" src="close.png" alt="">
+                     <img class="shop_item_image" src="fish_and_chips.png" alt="">
+                     <h3 class="shop_item_title">Fish and Chips</h3>
+                     <div class="shop_item_price">RM8.00</div>
+                     <div class="buttons">
+                         <button class="btn btn_primary shop_item_button" type="button">Add To Cart</button>
+                     </div>
+                 </div>
+                 <div class="preview" data-target="p-5">
+                     
+                     <img class="close" src="close.png" alt="">
+                     <img class="shop_item_image" src="fried_chicken.png" alt="">
+                     <h3 class="shop_item_title">Fried Chicken</h3>
+                     <div class="shop_item_price">RM3.00</div>
+                     <div class="buttons">
+                         <button class="btn btn_primary shop_item_button" type="button">Add To Cart</button>
+                     </div>
+                 </div>
+                 <div class="preview" data-target="p-6">
+                     
+                     <img class="close" src="close.png" alt="">
+                     <img class="shop_item_image" src="fried_rice.png" alt="">
+                     <h3 class="shop_item_title">Fried Rice</h3>
+                     <div class="shop_item_price">RM4.50</div>
+                     <div class="buttons">
+                         <button class="btn btn_primary shop_item_button" type="button">Add To Cart</button>
+                     </div>
+                 </div>
+                 <div class="preview" data-target="p-7">
+                     
+                     <img class="close" src="close.png" alt="">
+                     <img class="shop_item_image" src="garlic_bread.png" alt="">
+                     <h3 class="shop_item_title">Garlic Bread</h3>
+                     <div class="shop_item_price">RM3.50</div>
+                     <div class="buttons">
+                         <button class="btn btn_primary shop_item_button" type="button">Add To Cart</button>
+                     </div>
+                 </div>
+                 <div class="preview" data-target="p-8">
+                     
+                     <img class="close" src="close.png" alt="">
+                     <img class="shop_item_image" src="croissant.png" alt="">
+                     <h3 class="shop_item_title">Croissant</h3>
+                     <div class="shop_item_price">RM2.0</div>
+                     <div class="buttons">
+                         <button class="btn btn_primary shop_item_button" type="button">Add To Cart</button>
+                     </div>
+                 </div>
+                 <div class="preview" data-target="p-9">
+                     
+                     <img class="close" src="close.png" alt="">
+                     <img class="shop_item_image" src="sandwich.png" alt="">
+                     <h3 class="shop_item_title">Sandwich</h3>
+                     <div class="shop_item_price">RM2.00</div>
+                     <div class="buttons">
+                         <button class="btn btn_primary shop_item_button" type="button">Add To Cart</button>
+                     </div>
+                 </div>
+                 <div class="preview" data-target="p-10">
+                     <img class="close" src="close.png" alt="">
+                     <img class="shop_item_image" src="salad.png" alt="">
+                     <h3 class="shop_item_title">Salad</h3>
+                     <div class="shop_item_price">RM3.00</div>
+                     <div class="buttons">
+                         <button class="btn btn_primary shop_item_button" type="button">Add To Cart</button>
+                     </div>
+                 </div>
+                 <div class="preview" data-target="p-11">
+                     <img class="close" src="close.png" alt="">
+                     <img class="shop_item_image" src="chocolate_cake.png" alt="">
+                     <h3 class="shop_item_title">Chocolate Cake</h3>
+                     <div class="shop_item_price">RM4.50</div>
+                     <div class="buttons">
+                         <button class="btn btn_primary shop_item_button" type="button">Add To Cart</button>
+                     </div>
+                 </div>
+                 <div class="preview" data-target="p-12">
+                     <img class="close" src="close.png" alt="">
+                     <img class="shop_item_image" src="strawberry_cake.png" alt="">
+                     <h3 class="shop_item_title">Strawberry Cake</h3>
+                     <div class="shop_item_price">RM4.50</div>
+                     <div class="buttons">
+                         <button class="btn btn_primary shop_item_button" type="button">Add To Cart</button>
+                     </div>
+                 </div>
+                 <div class="preview" data-target="p-13">
+                     <img class="close" src="close.png" alt="">
+                     <img class="shop_item_image" src="ice_cream.png" alt="">
+                     <h3 class="shop_item_title">Ice Cream</h3>
+                     <div class="shop_item_price">RM1.50</div>
+                     <div class="buttons">
+                         <button class="btn btn_primary shop_item_button" type="button">Add To Cart</button>
+                     </div>
+                 </div>
+                 <div class="preview" data-target="p-14">
+                     <img class="close" src="close.png" alt="">
+                     <img class="shop_item_image" src="doughnut.png" alt="">
+                     <h3 class="shop_item_title">Doughnut</h3>
+                     <div class="shop_item_price">RM2.00</div>
+                     <div class="buttons">
+                         <button class="btn btn_primary shop_item_button" type="button">Add To Cart</button>
+                     </div>
+                 </div>
+                 <div class="preview" data-target="p-15">
+                     <img class="close" src="close.png" alt="">
+                     <img class="shop_item_image" src="cupcake.png" alt="">
+                     <h3 class="shop_item_title">Cupcake</h3>
+                     <div class="shop_item_price">RM1.50</div>
+                     <div class="buttons">
+                         <button class="btn btn_primary shop_item_button" type="button">Add To Cart</button>
+                     </div>
+                 </div>
+                 <div class="preview" data-target="p-16">
+                     <img class="close" src="close.png" alt="">
+                     <img class="shop_item_image" src="coffee.png" alt="">
+                     <h3 class="shop_item_title">Coffee</h3>
+                     <div class="shop_item_price">RM2.00</div>
+                     <div class="buttons">
+                         <button class="btn btn_primary shop_item_button" type="button">Add To Cart</button>
+                     </div>
+                 </div>
+                 <div class="preview" data-target="p-17">
+                     <img class="close" src="close.png" alt="">
+                     <img class="shop_item_image" src="matcha_latte.png" alt="">
+                     <h3 class="shop_item_title">Matcha Latte</h3>
+                     <div class="shop_item_price">RM2.50</div>
+                     <div class="buttons">
+                         <button class="btn btn_primary shop_item_button" type="button">Add To Cart</button>
+                     </div>
+                 </div>
+                 <div class="preview" data-target="p-18">
+                     <img class="close" src="close.png" alt="">
+                     <img class="shop_item_image" src="boba_tea.png" alt="">
+                     <h3 class="shop_item_title">Boba Tea</h3>
+                     <div class="shop_item_price">RM2.00</div>
+                     <div class="buttons">
+                         <button class="btn btn_primary shop_item_button" type="button">Add To Cart</button>
+                     </div>
+                 </div>
+                 <div class="preview" data-target="p-19">
+                     <img class="close" src="close.png" alt="">
+                     <img class="shop_item_image" src="chocolate_drink.png" alt="">
+                     <h3 class="shop_item_title">Chocolate Drink</h3>
+                     <div class="shop_item_price">RM3.00</div>
+                     <div class="buttons">
+                         <button class="btn btn_primary shop_item_button" type="button">Add To Cart</button>
+                     </div>
+                 </div>
+                 <div class="preview" data-target="p-20">
+                     <img class="close" src="close.png" alt="">
+                     <img class="shop_item_image" src="orange_juice.png" alt="">
+                     <h3 class="shop_item_title">Orange Juice</h3>
+                     <div class="shop_item_price">RM1.50</div>
+                     <div class="buttons">
+                         <button class="btn btn_primary shop_item_button" type="button">Add To Cart</button>
+                     </div>
+                 </div>
+                 <div class="preview" data-target="p-21">
+                     <img class="close" src="close.png" alt="">
+                     <img class="shop_item_image" src="lemon_juice.png" alt="">
+                     <h3 class="shop_item_title">Lemon Juice</h3>
+                     <div class="shop_item_price">RM1.50</div>
+                     <div class="buttons">
+                         <button class="btn btn_primary shop_item_button" type="button">Add To Cart</button>
+                     </div>
+                 </div>
+                 <div class="preview" data-target="p-23">
+                     <img class="close" src="close.png" alt="">
+                     <img class="shop_item_image" src="apron.jpg" alt="">
+                     <h3 class="shop_item_title">Apron</h3>
+                     <div class="shop_item_price">RM10.00</div>
+                     <div class="buttons">
+                         <button class="btn btn_primary shop_item_button" type="button">Add To Cart</button>
+                     </div>
+                 </div>
+                 <div class="preview" data-target="p-24">
+                     <img class="close" src="close.png" alt="">
+                     <img class="shop_item_image" src="bottled_beverages.jpeg" alt="">
+                     <h3 class="shop_item_title">Bottled Beverages</h3>
+                     <div class="shop_item_price">RM5.00</div>
+                     <div class="buttons">
+                         <button class="btn btn_primary shop_item_button" type="button">Add To Cart</button>
+                     </div>
+                 </div>
+                 <div class="preview" data-target="p-25">
+                     <img class="close" src="close.png" alt="">
+                     <img class="shop_item_image" src="coasters.jpg" alt="">
+                     <h3 class="shop_item_title">Coasters</h3>
+                     <div class="shop_item_price">RM2.00</div>
+                     <div class="buttons">
+                         <button class="btn btn_primary shop_item_button" type="button">Add To Cart</button>
+                     </div>
+                 </div>
+                 <div class="preview" data-target="p-26">
+                     <img class="close" src="close.png" alt="">
+                     <img class="shop_item_image" src="stainless_straw.jpg" alt="">
+                     <h3 class="shop_item_title">Stainless Straw</h3>
+                     <div class="shop_item_price">RM13.00</div>
+                     <div class="buttons">
+                         <button class="btn btn_primary shop_item_button" type="button">Add To Cart</button>
+                     </div>
+                 </div>
+             </div>
+         </main>
+         <!--    Footer       -->
+         <footer>
+             <div class="footer_basic">
+                     <div class="social"><a href="mailto:quickbitecafe@gmail.com?subject=Feedback%2FQuestion&body=Hi%20Quick%20Bite%20Cafe%2C%20I%20have%20a%20feedback%2Fquestion%21"><img src="email.png" alt="E-mail" class="footerIcon"></a>
+                         <a href="https://wa.me/60123456789?text=Hi%20Quick%20Bite%20Cafe%2C%20I%20have%20a%20feedback%2Fquestion%21"><img src="whatsapp.png" alt="Whatsapp" class="footerIcon"></a>
+                         <a href="tel:+60123456789"><img src="call.png" alt="Call" class="footerIcon"></a>
+                         <a href="sms:+60123456789?body=Hi%20Quick%20Bite%20Cafe%2C%20I%20have%20a%20feedback%2Fquestion%21"><img src="sms.png" alt="SMS" class="footerIcon"></a>
+                     </div>
+                     <ul class="list-inline">
+                         <li class="list-inline-item"><a href="../home.html">Home</a></li>
+                         <li class="list-inline-item"><a href="../about_us.html">About us</a></li>
+                         <li class="list-inline-item"><a href="../contact_us.html">FAQ</a></li>
+                     </ul>
+                     <p class="copyright">Quick Bite Cafe &copy; 2023 All Rights Reserved</p>
+             </div>
+         </footer>
+ </html>

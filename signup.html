@@ -1,0 +1,137 @@
+<!--
+    DCS Y1S1 G6 WDD Assignment WEB PAGE
+    Title: Quick Bite
+
+    Group members: 1)AMANDA XIN YUE WONG
+                   2)CHIA TENG HUI
+                   4)FONG XIN RONG, ALISTAIR
+                   5)TEH XI YUAN
+
+    file name : signup.html
+    <Signup Page>
+ -->
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <audio autoplay="true" loop>
+            <source src="../bgm.mp3" type="audio/mp3"/>
+            <source src="../bgm.ogg" type="audio/ogg"/>
+            <p>Upgrade your browser to HTML5</p>
+        </audio>
+        <title>Quick Cafe - Sign Up</title>
+        <base href="login_img/">
+        <link href="../quick_bite_cafe.css" rel="stylesheet">
+        <link href="../navigationbar.css" rel="stylesheet">
+        <style type="text/css">
+            body{
+                overflow-x: hidden;
+            }
+
+            header{
+                position: absolute;
+                top: 0;
+                width: 100%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                <a href="../home.html"><img src="../header_img/quick_bite_cafe_logo.png" alt="logo"></a>
+                </div>
+                <ul class="links">                                       
+                    <li><a href="../home.html" title="HOME">HOME</a></li>
+                    <li><a href="../about_us.html" title="ABOUT US">ABOUT US</a></li>
+                    <li><a href="../our_products.html" title="OUR PRODUCTS">OUR PRODUCTS</a></li>
+                    <li><a href="../feedback.html" title="FEEDBACK">FEEDBACK</a></li>
+                </ul>
+                <div class="login">
+                    <a href="../login.html" class="action_btn2" title="LOGIN">LOGIN</a>
+                </div>
+                <div class="dropdown_btn">
+                <img src="../tf_navicon2.png" alt="navicon" onclick="dropdown()">            
+            </div>
+            </nav>        
+        </nav>
+        <div class="dropdown_content">
+            <ul>
+                <li><a href="../home.html" title="HOME">HOME</a></li>
+                    <li><a href="../about_us.html" title="ABOUT US">ABOUT US</a></li>
+                    <li><a href="../our_products.html" title="OUR PRODUCTS">OUR PRODUCTS</a></li>
+                    <li><a href="../feedback.html" title="FEEDBACK">FEEDBACK</a></li>
+                    <a href="../login.html" class="action_btn2" title="LOGIN">LOGIN</a>
+            </ul>
+        </div>
+        <script>
+            function dropdown() {
+                var dropdown = document.querySelector('.dropdown_content');
+            
+                if (dropdown.style.display === 'none') {
+                    dropdown.style.display = 'flex';
+                } else {
+                    dropdown.style.display = 'none';
+                }
+            }
+        </script>
+        </header>
+
+    
+        <main>
+            <div class="signupMain">
+                <div class="container">
+                    <form method="get" action="../login.html">
+                    <div>
+                        <h2>Sign Up</h2>
+                        <div class="inputbox">
+                           <img src="name.png">
+                            <input type="text" id="fname" name="fname" required>
+                            <label for="email">First Name:</label>
+                        </div>
+                        <div class="inputbox">
+                            <img src="name.png">
+                            <input type="text" id="lname" name="lname" required>
+                            <label for="email">Last Name:</label>
+                        </div>
+                        <div class="inputbox">
+                            <img src="email.png">
+                            <input type="text" id="email" name="email" required>
+                            <label for="email">Email:</label>
+                        </div>
+                        <div class="inputbox">
+                            <img src="password.png">
+                            <input type="password" id="password" name="password" required>
+                            <label for="password">Password:</label>
+                        </div>
+                        <div class="forget">
+                            <p>Already a member?<a href="/login.html">Log In</a></p>
+                        </div>
+                        <button onclick="signup()">Sign Up</button>
+                        
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <script>
+            function signup(){
+                const fname=document.getElementById('fname');
+                const lname=document.getElementById('lname');
+                const email=document.getElementById('email');
+                const password=document.getElementById('password');
+                const fnameValue=fname.value.trim();
+                const lnameValue=lname.value.trim();
+                const emailValue=email.value.trim();
+                const passwordValue=password.value.trim();
+                if(fnameValue==""||lnameValue==""||emailValue==""||passwordValue==""){
+                    alert('Please Enter All Required Information')
+                }else{
+                    alert('Sign Up Successful!')
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,138 @@
+<!--
+    DCS Y1S1 G6 WDD Assignment WEB PAGE
+    Title: Quick Bite
+
+    Group members: 1)AMANDA XIN YUE WONG
+                   2)CHIA TENG HUI
+                   4)FONG XIN RONG, ALISTAIR
+                   5)TEH XI YUAN
+
+    file name : about_us.html
+    <About Us Page>
+ -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quick Bite Cafe - About Us</title>
+        <base href = "about_us_img/">
+        <!--   <meta>  -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="fast serving food near TarC">
+        <meta name="keywords" content="latest menu, tarc, popular food, high rating food, delicious food">
+        <!--  <audio>  -->
+        <audio autoplay="true" loop>
+            <source src="../bgm.mp3" type="audio/mp3"/>
+            <source src="../bgm.ogg" type="audio/ogg"/>
+        <p>Upgrade your browser to HTML5</p>
+        </audio>
+        <!--   <link>  -->
+        <link href="../quick_bite_cafe.css" rel="stylesheet">
+        <link href="../navigationbar.css" rel="stylesheet">
+    </head>
+    
+    <body>
+        <!--  Navigation Bar // Header  -->  
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="../home.html"><img src="../header_img/quick_bite_cafe_logo.png" alt="logo"></a>
+                </div>
+                <ul class="links">
+                    <li><a href="../home.html" title="HOME">HOME</a></li>
+                    <li><a href="../about_us.html" title="ABOUT US">ABOUT US</a></li>
+                    <li><a href="../our_products.html" title="OUR PRODUCTS">OUR PRODUCTS</a></li>
+                    <li><a href="../feedback.html" title="FEEDBACK">FEEDBACK</a></li>     
+                </ul>
+                <div class="login">
+                    <a href="../login.html" class="action_btn2" title="LOGIN">LOGIN</a>
+                </div>
+                <!--dropdown bar-->
+                <div class="dropdown_btn">
+                    <img src="../tf_navicon2.png" alt="navicon" onclick="dropdown()">           
+                </div>
+            </nav>
+        </nav>
+        <div class="dropdown_content">
+            <ul>
+                <li><a href="../home.html" title="HOME">HOME</a></li>
+                    <li><a href="../about_us.html" title="ABOUT US">ABOUT US</a></li>
+                    <li><a href="../our_products.html" title="OUR PRODUCTS">OUR PRODUCTS</a></li>
+                    <li><a href="../feedback.html" title="FEEDBACK">FEEDBACK</a></li>
+                    <a href="../login.html" class="action_btn2" title="LOGIN">LOGIN</a>
+            </ul>
+        </div>
+        <script>
+            function dropdown() {
+                var dropdown = document.querySelector('.dropdown_content');
+                
+                if (dropdown.style.display === 'none') {
+                    dropdown.style.display = 'flex';
+                } else {
+                    dropdown.style.display = 'none';
+                }
+            }
+        </script>
+        </header>
+        <!--      Webpage // Main      -->
+        <main>
+            <div class="intro">
+                <h1>ABOUT US</h1>
+                <hr>
+                <div class="speech">
+                    <blockquote>Nothing tastes better than food made with love and passion.</blockquote>
+                    <cite>Quick Bite Cafe</cite>
+                </div>
+            </div>
+            <div class="content">
+                <table class="about_us">
+                    <caption>Operation time:</caption>
+                    <tr>
+                        <th>Weekdays (except public holidays)</th>
+                        <th>Weekends</th>
+                    </tr>
+                    <tr>
+                        <td>7:30am - 6:30pm</td>
+                        <td>8:00am - 5:30pm</td>
+                    </tr>
+                </table>
+                <p>&nbsp&nbsp&nbsp&nbspQuick Bite Cafe was first opened in 2019 and we 
+                    start up as a small cafe. With the increasing amount 
+                    of customers, our cafe starts to grow larger and larger.</p>
+                <p>&nbsp&nbsp&nbspRight now, its size is almost larger than a quarter of 
+                    the area of TARC. Quick Bite Cafe is located at the heart of TARC, 
+                    so no matter where you are, we will always be there for you. </p>
+                <p>&nbsp&nbsp&nbsp&nbspWe provide a varieties of food, from coffee to spaghetti, you named it. 
+                    Our mission is to define perfection, in terms of food,
+                    as well as to provide food that is affordable yet tasty. </p>
+                <p>&nbsp&nbsp&nbsp&nbspWe hope to serve all Tarcians better, by providing high quality food, 
+                    comfortable environment and an unforgettable experience.</p>
+                    <img class="bigLocation" src="location.png" alt="We are here! Come find us!" usemap="#bigLocation">
+                    <img class="smallLocation" src="location.png" alt="We are here! Come find us!" usemap="#smallLocation">
+
+                    <map name="bigLocation">
+                        <area shape="poly" coords="511,163,541,161,541,168,579,167,579,208,649,209,631,243,602,241,553,255,541,245,529,248,510,226" alt="location" href="https://www.google.com/maps/dir//3.215905,101.7286619/@3.2152938,101.7272767,17.9z?entry=ttu" target="_blank"> 
+                    </map>
+                    <map name="smallLocation">
+                        <area shape="poly" coords="350,112,373,111,372,114,398,114,38,142,446,143,434,166,415,164,381,174,371,168,363,169,351,155" alt="location" href="https://www.google.com/maps/dir//3.215905,101.7286619/@3.2152938,101.7272767,17.9z?entry=ttu" target="_blank"> 
+                    </map>
+            </div>
+        </main>
+        <!--    Footer       -->
+        <footer>
+            <div class="footer_basic">
+                    <div class="social"><a href="mailto:quickbitecafe@gmail.com?subject=Feedback%2FQuestion&body=Hi%20Quick%20Bite%20Cafe%2C%20I%20have%20a%20feedback%2Fquestion%21"><img src="email.png" alt="E-mail" class="footerIcon"></a>
+                        <a href="https://wa.me/60123456789?text=Hi%20Quick%20Bite%20Cafe%2C%20I%20have%20a%20feedback%2Fquestion%21"><img src="whatsapp.png" alt="Whatsapp" class="footerIcon"></a>
+                        <a href="tel:+60123456789"><img src="call.png" alt="Call" class="footerIcon"></a>
+                        <a href="sms:+60123456789?body=Hi%20Quick%20Bite%20Cafe%2C%20I%20have%20a%20feedback%2Fquestion%21"><img src="sms.png" alt="SMS" class="footerIcon"></a>
+                    </div>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="../home.html">Home</a></li>
+                        <li class="list-inline-item"><a href="../about_us.html">About us</a></li>
+                        <li class="list-inline-item"><a href="../contact_us.html">FAQ</a></li>
+                    </ul>
+                    <p class="copyright">Quick Bite Cafe &copy; 2023 All Rights Reserved</p>
+            </div>
+        </footer>
+    </body>
+</html>

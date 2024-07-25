@@ -1,0 +1,145 @@
+<!--
+    DCS Y1S1 G6 WDD Assignment WEB PAGE
+    Title: Quick Bite
+
+    Group members: 1)AMANDA XIN YUE WONG
+                   2)CHIA TENG HUI
+                   4)FONG XIN RONG, ALISTAIR
+                   5)TEH XI YUAN
+
+    file name : contact_us.html
+    <Contact Us Page>
+ -->
+ <!DOCTYPE html>
+ <html>
+    <head>
+        <title>Quick Bite Cafe - Contact Us</title>
+        <base href = "contact_us_img/">
+        <!--   <meta>  -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="fast serving food near TarC">
+        <meta name="keywords" content="latest menu, tarc, popular food, high rating food, delicious food">
+        <audio autoplay="true" loop>
+            <source src="../bgm.mp3" type="audio/mp3"/>
+            <source src="../bgm.ogg" type="audio/ogg"/>
+            <p>Upgrade your browser to HTML5</p>
+        </audio>
+        <!--   <link>  -->
+        <link href="../quick_bite_cafe.css" rel="stylesheet">
+        <link href="../navigationbar.css" rel="stylesheet">
+
+    </head>
+    
+    <body>
+        <!--  Navigation Bar // Header  -->
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="../home.html"><img src="../header_img/quick_bite_cafe_logo.png" alt="logo"></a>
+                </div>
+                <ul class="links">
+                    <li><a href="../home.html" title="HOME">HOME</a></li>
+                    <li><a href="../about_us.html" title="ABOUT US">ABOUT US</a></li>
+                    <li><a href="../our_products.html" title="OUR PRODUCTS">OUR PRODUCTS</a></li>
+                    <li><a href="../feedback.html" title="FEEDBACK">FEEDBACK</a></li>     
+                </ul>
+                <div class="login">
+                    <a href="../login.html" class="action_btn2" title="LOGIN">LOGIN</a>
+                </div>
+                <div class="dropdown_btn">
+                    <img src="../tf_navicon2.png" alt="navicon" onclick="dropdown()">           
+                </div>
+            </nav>
+        <div class="dropdown_content">
+            <ul>
+                <li><a href="../home.html" title="HOME">HOME</a></li>
+                    <li><a href="../about_us.html" title="ABOUT US">ABOUT US</a></li>
+                    <li><a href="../our_products.html" title="OUR PRODUCTS">OUR PRODUCTS</a></li>
+                    <li><a href="../feedback.html" title="FEEDBACK">FEEDBACK</a></li>
+                    <a href="../login.html" class="action_btn2" title="LOGIN">LOGIN</a>
+            </ul>
+        </div>
+        <script>
+            function dropdown() {
+                var dropdown = document.querySelector('.dropdown_content');
+                
+                if (dropdown.style.display === 'none') {
+                    dropdown.style.display = 'flex';
+                } else {
+                    dropdown.style.display = 'none';
+                }
+            }
+        </script>
+        </header>
+        <!--      Webpage // Main      -->
+        <main>
+            <div class="intro">
+                <h1>CONTACT US</h1>
+                <hr>
+                <div class="speech">
+                    <blockquote>
+                        Once you taste our food, you will always come back for more.
+                    </blockquote>
+                    <cite>
+                        Quick Bite Cafe
+                    </cite>
+                </div>
+            </div>
+            <div class="content">
+                <h2>Have a question? Look Here!</h2>
+                <dl>
+                    <dt>How can I make online booking?</dt>
+                        <dd>You can make booking by going to the <a href="../our_products.html">OUR PRODUCTS</a> webpage, then you can click on your desired food to make your booking.</dd>
+                    <dt>How can I become a member?</dt>
+                        <dd>You can become a member by going to the <a href="../home.html">HOME</a> webpage and click on the <a href="../signup.html">SIGN UP</a> button. After fill in the form required, you will officially become our member!</dd>
+                    <dt>What are the benefits of a member?</dt>
+                        <dd>Our members can enjoy exclusive rewards such as discount of 20%, free Chocolate Cake for purchases up to RM 30 and many more!</dd>
+                </dl>
+                <h2>Let's get in touch! We're glad to here from you!</h2>
+                <div class="contact">
+                    <a href="mailto:quickbitecafe@gmail.com?subject=Feedback%2FQuestion&body=Hi%20Quick%20Bite%20Cafe%2C%20I%20have%20a%20feedback%2Fquestion%21">
+                        <div class="email">
+                            <p>E-mail</p>
+                            <img src="email.png" alt="E-mail">
+                        </div>
+                    </a>
+                    <a href="https://wa.me/60123456789?text=Hi%20Quick%20Bite%20Cafe%2C%20I%20have%20a%20feedback%2Fquestion%21">
+                        <div class="whatsapp">
+                            <p>Whatsapp</p>
+                            <img src="whatsapp.png" alt="Whatsapp">
+                        </div>
+                    </a>
+                    <a href="tel:+60123456789">
+                        <div class="call">
+                            <p>Call</p>
+                            <img src="call.png" alt="Call">
+                        </div>
+                    </a>
+                    <a href="sms:+60123456789?body=Hi%20Quick%20Bite%20Cafe%2C%20I%20have%20a%20feedback%2Fquestion%21">
+                        <div class="sms">
+                            <p>SMS</p>
+                            <img src="sms.png" alt="SMS">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </main>
+        <!--    Footer       -->
+        <footer>
+            <div class="footer_basic">
+                    <div class="social"><a href="mailto:quickbitecafe@gmail.com?subject=Feedback%2FQuestion&body=Hi%20Quick%20Bite%20Cafe%2C%20I%20have%20a%20feedback%2Fquestion%21"><img src="email.png" alt="E-mail" class="footerIcon"></a>
+                        <a href="https://wa.me/60123456789?text=Hi%20Quick%20Bite%20Cafe%2C%20I%20have%20a%20feedback%2Fquestion%21"><img src="whatsapp.png" alt="Whatsapp" class="footerIcon"></a>
+                        <a href="tel:+60123456789"><img src="call.png" alt="Call" class="footerIcon"></a>
+                        <a href="sms:+60123456789?body=Hi%20Quick%20Bite%20Cafe%2C%20I%20have%20a%20feedback%2Fquestion%21"><img src="sms.png" alt="SMS" class="footerIcon"></a>
+                    </div>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="../home.html">Home</a></li>
+                        <li class="list-inline-item"><a href="../about_us.html">About us</a></li>
+                        <li class="list-inline-item"><a href="../contact_us.html">FAQ</a></li>
+                    </ul>
+                    <p class="copyright">Quick Bite Cafe &copy; 2023 All Rights Reserved</p>
+            </div>
+        </footer>
+    </body>
+ </html>

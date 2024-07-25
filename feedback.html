@@ -1,0 +1,147 @@
+<!--
+    DCS Y1S1 G6 WDD Assignment WEB PAGE
+    Title: Quick Bite
+
+    Group members: 1)AMANDA XIN YUE WONG
+                   2)CHIA TENG HUI
+                   4)FONG XIN RONG, ALISTAIR
+                   5)TEH XI YUAN
+
+    file name : feedback.html
+    <Feedback Page>
+ -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quick Bite Cafe Feedback Form</title>
+        <base href="feedback_img/">
+        <!--   <meta>  -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="fast serving food near TarC">
+        <meta name="keywords" content="latest menu, tarc, popular food, high rating food, delicious food">
+        <!--  <audio>  -->
+        <audio autoplay="true" loop>
+            <source src="../bgm.mp3" type="audio/mp3"/>
+            <source src="../bgm.ogg" type="audio/ogg"/>
+            <p>Upgrade your browser to HTML5</p>
+        </audio>
+        <!--   <link>  -->
+        <link rel="stylesheet" href="../feedback.css">
+        <link href="../quick_bite_cafe.css" rel="stylesheet">
+        <link href="../navigationbar.css" rel="stylesheet">
+
+        <style type="text/css">
+        header{
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        </style>
+    </head>
+
+    <body>
+        <!--  Navigation Bar // Header  -->
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="../home.html"><img src="../header_img/quick_bite_cafe_logo.png" alt="logo"></a>
+                </div>
+                <ul class="links">
+                    <li><a href="../home.html" title="HOME">HOME</a></li>
+                    <li><a href="../about_us.html" title="ABOUT US">ABOUT US</a></li>
+                    <li><a href="../our_products.html" title="OUR PRODUCTS">OUR PRODUCTS</a></li>
+                    <li><a href="../feedback.html" title="FEEDBACK">FEEDBACK</a></li>     
+                </ul>
+                <div class="login">
+                    <a href="../login.html" class="action_btn2" title="LOGIN">LOGIN</a>
+                </div>
+                <!--dropdown bar-->
+                <div class="dropdown_btn">
+                    <img src="../tf_navicon2.png" alt="navicon" onclick="dropdown()">           
+                </div>
+            </nav>
+            <div class="dropdown_content">
+                <ul>
+                    <li><a href="../home.html" title="HOME">HOME</a></li>
+                        <li><a href="../about_us.html" title="ABOUT US">ABOUT US</a></li>
+                        <li><a href="../our_products.html" title="OUR PRODUCTS">OUR PRODUCTS</a></li>
+                        <li><a href="../feedback.html" title="FEEDBACK">FEEDBACK</a></li>
+                        <a href="../login.html" class="action_btn2" title="LOGIN">LOGIN</a>
+                </ul>
+            </div>
+            <script>
+                function dropdown() {
+                    var dropdown = document.querySelector('.dropdown_content');
+            
+                    if (dropdown.style.display === 'none') {
+                        dropdown.style.display = 'flex';
+                    } else {
+                        dropdown.style.display = 'none';
+                    }
+                }
+            </script>
+        </header>
+        <!--      Webpage // Main      -->
+        <main>
+            <section></section>
+            <div class="feedBackBox">
+                <div class="post">
+                    <div class="text">Thanks for rating us!😃</div>
+                </div>
+                <form class="feedback" id="feedbackForm">
+                    <h1>Give Your Feedback</h1>
+                    <div class="id">
+                        <input type="text" placeholder="Full name">
+                        <i><img src="user.png" alt="User" width="40" height="40"></i>
+                    </div>
+                    <div class="id">
+                        <input type="email" placeholder="Email address">
+                        <i><img src="email.png" alt="Email" width="40" height="50"></i>
+                    </div>
+                    <div class="star-widget">
+                        <input type="radio" name="rate" id="rate-5">
+                        <label for="rate-5"><img src="star.png" alt="star" width="30" height="30" class="glowingStar"></label>
+                        <input type="radio" name="rate" id="rate-4">
+                        <label for="rate-4"><img src="star.png" alt="star" width="30" height="30" class="glowingStar"></label>
+                        <input type="radio" name="rate" id="rate-3">
+                        <label for="rate-3"><img src="star.png" alt="star" width="30" height="30" class="glowingStar"></label>
+                        <input type="radio" name="rate" id="rate-2">
+                        <label for="rate-2"><img src="star.png" alt="star" width="30" height="30" class="glowingStar"></label>
+                        <input type="radio" name="rate" id="rate-1">
+                        <label for="rate-1"><img src="star.png" alt="star" width="30" height="30" class="glowingStar"></label>
+                    </div>
+                    <textarea cols="15" rows="5" placeholder="Enter your opinion here.."></textarea>
+                    <div class="btn">
+                        <button>Send</button>
+                    </div>
+                </form>
+            </div>
+            <script>
+            const btn = document.querySelector("button");
+            const post = document.querySelector(".post");
+            const feedback = document.querySelector(".feedback");
+            const feedbackForm = document.getElementById("feedbackForm");
+            btn.onclick = ()=>{
+                const emailInput = feedbackForm.querySelector('input[type="email"]');
+                const emailValue = emailInput.value.trim();
+
+                if (!isValidEmail(emailValue)) {
+                alert("Please enter a valid email address.");
+                return false; // Prevent form submission
+                }
+
+                // Function to validate email format
+                    function isValidEmail(email) {
+                    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                    return emailPattern.test(email);
+                }
+
+                feedback.style.display = "none";
+                post.style.display = "block";
+                return false;
+            }
+        </script>
+        </main>
+    </body>
+</html>

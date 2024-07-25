@@ -1,0 +1,194 @@
+<!--
+    DCS Y1S1 G6 WDD Assignment WEB PAGE
+    Title: Quick Bite
+
+    Group members: 1)AMANDA XIN YUE WONG
+                   2)CHIA TENG HUI
+                   4)FONG XIN RONG, ALISTAIR
+                   5)TEH XI YUAN
+
+    file name : home.html
+    <Home Page>
+ -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quick Bite</title>
+        <base href="home_img/">
+        <!--   <meta>  -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="fast serving food near TarC">
+        <meta name="keywords" content="latest menu, tarc, popular food, high rating food, delicious food">
+        <!--  <audio>  -->
+        <audio autoplay="true" loop>
+            <source src="../bgm.mp3" type="audio/mp3"/>
+            <source src="../bgm.ogg" type="audio/ogg"/>
+            <p>Upgrade your browser to HTML5</p>
+        </audio>
+        <!--   <link>  -->
+        <link href="../quick_bite_cafe.css" rel="stylesheet">
+        <link href="../navigationbar.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <!--  Navigation Bar // Header  -->
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="../home.html"><img src="../header_img/quick_bite_cafe_logo.png" alt="logo"></a>
+                </div>
+                <ul class="links">
+                    <li><a href="../home.html" title="HOME">HOME</a></li>
+                    <li><a href="../about_us.html" title="ABOUT US">ABOUT US</a></li>
+                    <li><a href="../our_products.html" title="OUR PRODUCTS">OUR PRODUCTS</a></li>
+                    <li><a href="../feedback.html" title="FEEDBACK">FEEDBACK</a></li>     
+                </ul>
+                <div class="login">
+                    <a href="../login.html" class="action_btn2" title="LOGIN">LOGIN</a>
+                </div>
+                <!--dropdown bar-->
+                <div class="dropdown_btn">
+                    <img src="../tf_navicon2.png" alt="navicon" onclick="dropdown()">           
+                </div>
+            </nav>
+            <div class="dropdown_content">
+                <ul>
+                    <li><a href="../home.html" title="HOME">HOME</a></li>
+                    <li><a href="../about_us.html" title="ABOUT US">ABOUT US</a></li>
+                    <li><a href="../our_products.html" title="OUR PRODUCTS">OUR PRODUCTS</a></li>
+                    <li><a href="../feedback.html" title="FEEDBACK">FEEDBACK</a></li>
+                    <a href="../login.html" class="action_btn2" title="LOGIN">LOGIN</a>
+                </ul>
+            </div>
+            <script>
+                function dropdown() {
+                    var dropdown = document.querySelector('.dropdown_content');
+                    
+                    if (dropdown.style.display === 'none') {
+                        dropdown.style.display = 'flex';
+                    } else {
+                        dropdown.style.display = 'none';
+                    }
+                }
+            </script>
+        </header>
+        <!--      Webpage // Main      -->
+        <main>
+            <div class="intro">
+                <h1>HOME</h1>
+                <hr>
+                <div class="hometop">
+                    <div class="homeSpeech">
+                        <blockquote>
+                            When you smell the aroma of joy, you will know that it's come from Quick Bite Cafe!
+                        </blockquote>
+                        <cite>
+                            Quick Bite Cafe
+                        </cite>
+                    </div>
+                    <!--  <video>  -->
+                    <div class="player-container">
+                        <video controls autoplay="true">
+                            <source src="../QuickBite.mp4" type="video/mp4"/>
+                            <source src="../QuickBite.webm" type="video/webm"/>
+                            <p>Upgrade your browser to HTML5</p>
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="slidetop"> 
+                <h2>Up & coming dishes in Future !!!</h2>
+                <hr>
+            </div>
+            <div id="picture_slide">
+                <!-- Slides -->
+                <img class="mySlides" src="skewer.jpg">
+                <img class="mySlides" src="pasta.jpg">
+                <img class="mySlides" src="burger.jpg">
+                <!-- Slide Navigation -->
+                <div class="navigation">
+                    <div class="left " onclick="plusDivs(-1)">&#10094;</div>
+                    <div class="right " onclick="plusDivs(1)">&#10095;</div>
+                    <span class="dots demo slide:hover" onclick="currentDiv(1)"></span>
+                    <span class="dots demo slide:hover" onclick="currentDiv(2)"></span>
+                    <span class="dots demo slide:hover" onclick="currentDiv(3)"></span>
+                </div>
+            </div>
+            <script>
+                var slideIndex = 1;
+                showDivs(slideIndex);
+    
+                function plusDivs(n) {
+                showDivs(slideIndex += n);
+                }
+    
+                function currentDiv(n) {
+                showDivs(slideIndex = n);
+                }
+    
+                function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+                if (n > x.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = x.length}
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" slidecolor", "");
+                }
+                x[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " slidecolor";
+                }
+    
+                setInterval(function() {
+                plusDivs(1);
+                }, 3000);
+            </script>
+            <br>
+            <div class="content">
+                <div class="home">
+                    <h2>New Set Meal has just arrived!</h2>
+                    <div class="item1">
+                        <img src="../our_products_img/set_a.png" alt="New Set Meal">
+                        <p>Check out our latest set meal! This set meal consists of our famous Spaghetti Bolognese, French Fries and a drink of your choice! <a href="../our_products.html#set_a">Click here</a> to learn more.</p>
+                    </div>
+                    <h2>Special promotion during special celebration</h2>
+                    <div class="item2">
+                        <p>Let's celebrate Malaysia Independence Day with our special promotion! You may enjoy discount up to 30% for selected meals! Limited to Walk-In customers only.</p>
+                        <img src="discount.png" alt="Discount">
+                    </div>
+                    <h2>Join our family</h2>
+                    <div class="item3">
+                        <img src="member.png" alt="Become our member">
+                        <p>Want to enjoy exclusive rewards for members only? <a href="../signup.html">Click here</a> to register for free and become part of our family! Psss... Members can enjoy discount up to 20% for all meals!</p>
+                    </div>
+                    <h2>Order Now</h2>
+                    <div class="item4">
+                        <p>Dont's want to queue and wait for so long just to satisfy your stomach but sacrifice your energy? Fear not! You can just <a href="../our_products.html">book online</a> to skip the queue and eat like a boss!</p>
+                        <img src="cart.png" alt="Online Booking">
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!--    Footer       -->
+        <footer>
+            <div class="footer_basic">
+                <div class="social"><a href="mailto:quickbitecafe@gmail.com?subject=Feedback%2FQuestion&body=Hi%20Quick%20Bite%20Cafe%2C%20I%20have%20a%20feedback%2Fquestion%21"><img src="email.png" alt="E-mail" class="footerIcon"></a>
+                    <a href="https://wa.me/60123456789?text=Hi%20Quick%20Bite%20Cafe%2C%20I%20have%20a%20feedback%2Fquestion%21"><img src="whatsapp.png" alt="Whatsapp" class="footerIcon"></a>
+                    <a href="tel:+60123456789"><img src="call.png" alt="Call" class="footerIcon"></a>
+                    <a href="sms:+60123456789?body=Hi%20Quick%20Bite%20Cafe%2C%20I%20have%20a%20feedback%2Fquestion%21"><img src="sms.png" alt="SMS" class="footerIcon"></a>
+                </div>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="../home.html">Home</a></li>
+                    <li class="list-inline-item"><a href="../about_us.html">About us</a></li>
+                    <li class="list-inline-item"><a href="../contact_us.html">FAQ</a></li>
+                </ul>
+                <p class="copyright">Quick Bite Cafe &copy; 2023 All Rights Reserved</p>
+            </div>
+        </footer>
+    </body>
+</html>
